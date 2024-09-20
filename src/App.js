@@ -8,12 +8,12 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAt_1shW0NwGnN03U1oUB-SFwQv0EFDEZ4",
-  authDomain: "superchat-70bbc.firebaseapp.com",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
   projectId: "superchat-70bbc",
   storageBucket: "superchat-70bbc.appspot.com",
   messagingSenderId: "871358439777",
-  appId: "1:871358439777:web:39061563f925f70c0ca520"
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
@@ -44,6 +44,8 @@ function SignIn() {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider);
   }
+
+  
 
   return (
     <>
