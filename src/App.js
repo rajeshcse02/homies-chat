@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>WELCOME HOMIES 🤓</h1>
+        <h1>WELCOME HOMIES🤓</h1>
         <SignOut />
       </header>
 
